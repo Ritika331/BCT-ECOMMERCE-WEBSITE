@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calvin klein clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <!-- Content will go here -->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <div class="container">
+                    <img src="data:image/png;base64,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"
+                        alt="Bootstrap" width="90" height="70">
+                    <a class="navbar-brand" href="#">
+                        <h1>CALVIN KLEIN</h1></button>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'women' %}"></a></li>
+                            <button type="button" class="btn btn-dark" onclick="navigateTo('/women/')">Women</button>
+
+                        
+                            <li class="nav-item"><a class="nav-link" href="{% url 'men' %}"></a></li>
+                            <button type="button" class="btn btn-dark" onclick="navigateTo('/men/')">Men</button>
+                        
+                            <li class="nav-item"><a class="nav-link" href="{% url 'kids' %}"></a></li>
+                            <button type="button" class="btn btn-dark" onclick="navigateTo('/women/')">Kids</button>
+                        
+                            <li class="nav-item"><a class="nav-link" href="{% url 'sale' %}"></a></li>
+                            <button type="button" class="btn btn-dark" onclick="navigateTo('/sale/')">Sale</button>
+                        
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"></a></li>
+                            <button type="button" class="btn btn-dark" onclick="navigateTo('/contact/')">Contacts</button>
+                        
+                        </ul>
+                        
+                    </div>
+                </div>
+            </nav>
+            <style>
+                #carouselExampleCaptions {
+                  width: 90%; /* Set width to 90% */
+                  margin: auto; /* Center the carousel */
+                }
+              </style>
+              
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1300">
+                <header class="bg-light text-dark text-center py-5"></header>
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://thedrum-media.imgix.net//thedrum-prod/s3/download.png?w=1280&ar=default&fit=crop&crop=faces&auto=format" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>VINTAGE STYLE</h5>
+                      <p>UNLEASHING THE ESSENCE OF 90'S</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://i.ytimg.com/vi/jIlipkSns70/maxresdefault.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>ELEGANCE HAS NO BOUNDARIES</h5>
+                      <p>DRESSING WELL IS A SIGN OF BOLD CHARACTER</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://i0.wp.com/mmgsuccess.blog/wp-content/uploads/2022/12/317798480_10159252899438087_7017366874214351429_n.jpg?ssl=1" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>THIS IS OUR FASHION</h5>
+                      <p>GEN-Z FASHION</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+               
+    <header class="bg-light text-dark text-center py-5">
+        <div class="container">
+            <h1>Discover Our Latest Collection</h1>
+
+            <p>Explore the finest footwear crafted for comfort and style.</p>
+            <a href="#" class="btn btn-dark">Shop Now</a>
+        </div>
+    </header>
+    <section class="container my-5">
+        <img src="https://us-i.makeupstore.com/q/qo/qo5yqecpmcdj.jpg" class="img-fluid" alt="...">
+        <h3 class="text-center my-4">intoducing new perfumes for mens </h3>
+        <h2 class="text-center mb-4">Featured Products</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://watch-connection.com/cdn/shop/files/z4260630038368_c7dc49c61bac6e0bacd2e786d686469e_310850479fdb44c08bc16c43cf6e2e9b_master_1024x1024.jpg?v=1701903454" class="card-img-top" alt="Men's Watch">
+                    <div class="card-body">
+                        <h3 class="card-title">Men's Watch</h3>
+                        <p class="card-text">Timeless elegance</p>
+                        <p class="card-text"><strong>$130</strong></p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                        <!-- <button class="btn btn-dark" onclick="addToCart('Men\'s Watch', 130)">Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://images-cdn.ubuy.co.in/634ff90d3dbd4d1493270923-calvin-klein-men-039-s-slim.jpg" class="card-img-top" alt="Slim Fit Jeans">
+                    <div class="card-body">
+                        <h3 class="card-title">Slim Fit Jeans</h3>
+                        <p class="card-text">Comfortable and stylish</p>
+                        <p class="card-text"><strong>$140</strong></p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                        <!-- <button class="btn btn-dark" onclick="addToCart('Slim Fit Jeans', 140)">Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://www.luxuryformen.com/media/catalog/product/cache/59c05a363ebb999de8d751c6aa10215f/c/a/calvin_klein_backpack_sport_black_1.jpg" class="card-img-top" alt="Premium Backpack">
+                    <div class="card-body">
+                        <h3 class="card-title">Premium Backpack</h3>
+                        <p class="card-text">Durable and stylish</p>
+                        <p class="card-text"><strong>$50</strong></p>
+                        <button class="btn btn-dark">Add to Cart</button>
+                        <!-- <button class="btn btn-dark" onclick="addToCart('Premium Backpack', 50)">Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Sign up for our newsletter to receive the latest news and exclusive offers.</p>
+            <form class="row justify-content-center">
+                <div class="col-md-6">
+                    <input type="email" class="form-control mb-3" placeholder="Enter your email">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-light mb-3">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-light text-dark text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 CALVIN KLEIN CLONE. All rights reserved.</p>
+            <ul class="list-inline">
+                <p></p>
+                <li class="item"><a href="#">Privacy Policy</a></li>
+                <p></p>
+                <li class="item"><a href="#">Terms of Service</a></li>
+                <p></p>
+                <li class="item"><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<section class="bg-dark text-white text-center py-5">
+    <div class="container">
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              HELP 
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">**Help**  
+
+                At CALVIN KLEIN, we are committed to providing you with the best shopping experience.
+                 If you need assistance, our **Customer Support** team is always here to help. You can 
+                 **contact us** via email, phone, or live chat for any inquiries related to your orders
+                 , payments, or account issues. Need to **track your order**? Simply enter your order 
+                 number on our tracking page to check the status of your shipment. For information on 
+                 **returns and exchanges**, visit our returns policy section to understand how to request
+                  a refund or exchange an item. We also offer details on **shipping and delivery**,
+                   including estimated delivery times and international shipping options. If you have
+                    questions about **payment methods**, our accepted options include credit/debit cards
+                    , PayPal, and other secure payment gateways. For quick answers, check out our **FAQs**
+                    , where we address common concerns regarding account login, order modifications, and
+                     sizing guides. Additionally, we encourage you to review our **Privacy Policy** and
+                      **Terms & Conditions** to understand how we handle your data and ensure a seamless
+                       shopping experience. If you need further assistance, don't hesitate to reach 
+                       out—we’re always happy to help!</a></li>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CUASTOMER SERVICE
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">for any kind of inconvinience , you can reach us via :</a></li>
+              <li><a class="dropdown-item" href="#">contact no: +1 1800 9696 00</a></li>
+              <li><a class="dropdown-item" href="#">email us at : calvinkleinUSA@gmail.com</a></li>
+              <li><a class="dropdown-item" href="#">feedback : at contacts option on navigation bar on the right hand side </a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              FAQs
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">
+
+                1. How to Place an Order: Guidance on adding items to your shopping bag,
+                 proceeding to checkout, and completing your purchase.
+                2. **Shopping Bag**: Information on managing items in your shopping bag, 
+                including updating quantities or removing products before finalizing your 
+                order.
+                3. **Gift Services**: Details on available gift options, such as gift
+                 wrapping or including personalized messages with your order.
+                4. **Product Care**: Recommendations on how to properly care for and
+                 maintain Calvin Klein products to ensure their longevity.
+                5. **Returns**: Information on the return policy, including how to
+                 initiate a return, timeframes, and any associated conditions. </a></li>
+            </ul>
+          </div>
+<script>
+    function navigateTo(page) {
+        window.location.href = page;
+    }
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function addToCart(item, price, image) {
+    cart.push({ item, price, image }); // Store item details
+    localStorage.setItem("cart", JSON.stringify(cart)); // Save to localStorage
+    updateCartCount(); // Update cart count badge
+    alert(`${item} added to cart!`);
+}
+
+function updateCartCount() {
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+function loadCartCount() {
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+document.addEventListener("DOMContentLoaded", loadCartCount);
+
+</script>
+
+</html>

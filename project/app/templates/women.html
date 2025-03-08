@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Collection</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+header {
+    background-color: pink;
+    color: rgb(245, 14, 118);
+    padding: 15px;
+}
+
+nav a {
+    color: rgb(245, 14, 118);;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width:200px;
+    height:500px;
+}
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Women's Collection</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'kids' %}">Kids</a>
+            <a href="{% url 'men' %}">Men</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'sale' %}">Sale</a>
+    </header>
+
+    <section class="products">
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRi8XklOry_-ipS2ISlpoIFzcCnginPqpmd4Q_KKNIqHE5EF9OY_7LGFc_tF4BPj598LtGPVLIsEOK02ETjkyHQbj5wl06F2oqWZ1qBpjHL7JpXqgviZBxyqU5Bpi7wMlmdFuRNwMrCBSXC1a6YOw&usqp=CAc" alt="Dress" style="width:145px">
+            <h2>Elegant Dress</h2>
+            <p>$120</p>
+            <button onclick="addToCart('Elegant Dress', 120)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSjDtTmuqLPWqE43oc11HQs5FDy_QO3sRvAM55MZ8A-g3-YR_rLP0lfgGKVE5OYf-_5_eBKWx1kndIyXykNPJks_HJrhXyb" alt="Shoes" style="width:200px">
+            <h2>Stylish heels</h2>
+            <p>$80</p>
+            <button onclick="addToCart('Stylish Shoes', 80)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSwLg1tFCJNs_BlCX6J-RFy5OxdxuZ08iSKuti64i9icx2NKLJLndbLJm7Un_TlbdfnrWxARgznMSxkjYz_ApbfXRsZUTqnNdU8_BUXzLoTRdLvILHPsEuY0YU" alt="bags" style="width:200px">
+            <h2>classy handbags</h2>
+            <p>$149</p>
+            <button onclick="addToCart('Stylish Shoes', 80)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkJYxOgMubpOO6Zum6CvE5ZFMwCbw7ik5DIG3lOAcVMpO5uuLQv42q1NDY12Qw16Wk399rhWo0cY0bL1VGi6gwTYpneh6x7Xc4iSyQVDlcHuG3RCs8AFvc" alt="perfume" style="width:200px">
+            <h2>Eau de parfum </h2>
+            <p>$120</p>
+            <button onclick="addToCart('Stylish Shoes', 80)">Add to Cart</button>
+        </div>
+    </section>
+
+    <script >
+        
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(item, price) {
+    cart.push({ item, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    alert(`${item} added to cart!`);
+}
+
+function updateCartCount() {
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+function loadCartCount() {
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+document.addEventListener("DOMContentLoaded", loadCartCount);
+
+    </script>
+</body>
+</html>

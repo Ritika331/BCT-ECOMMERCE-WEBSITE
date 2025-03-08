@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid's Collection</title>
+    <style>
+        body {
+            background: url('https://djx5h8pabpett.cloudfront.net/wp-content/uploads/sites/4/2024/02/CK.jpg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+header {
+    background-color:purple;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width:300px;
+    height:600px;
+}
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kid's Collection</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'women' %}">Women</a>
+            <a href="{% url 'men' %}">Men</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'sale' %}">Sale</a>
+        </nav>
+    </header>
+
+    <section class="products">
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR_sKcC0p0L7Cxs_Kbyv1KusIqNcb3uT2LTCaDXGi69myETAJdXNUu8fWfoH2KI-Q9B4oWq4Oyfhanv0VLYAP9oBjXl8sgIFUTMIuYLhVYEMN1rwvTnaa8kTQ" alt="Dress" style="width:300px">
+            <h2>boys tracksuit</h2>
+            <p>$120</p>
+            <button onclick="addToCart('boys tracksuit', 120)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://calvinklein-eu.scene7.com/is/image/CalvinKleinEU/IG0IG02679_TER_main?$b2c_uplp_listing_2560$" alt="Shirt" style="width:300px">
+            <h2>girls jacket</h2>
+            <p>$120</p>
+            <button onclick="addToCart('girls jackett', 120)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://calvinklein-eu.scene7.com/is/image/CalvinKleinEU/EFCK080972_525_main?$b2c_updp_m_mainImage_1920$" alt="Shoes" style="width:300px">
+            <h2>Stylish Shoes</h2>
+            <p>$80</p>
+            <button onclick="addToCart('Stylish Shoes', 80)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://img01.ztat.net/article/spp-media-p1/b1b14f16fe9a419a8c71c3b29916b1db/1f166a593dfd4e54b89cc5fa2b1cffdc.jpg?imwidth=762" alt="Shoes" style="width:300px">
+            <h2>Stylish School bags</h2>
+            <p>$80</p>
+            <button onclick="addToCart('Stylish School bags', 80)">Add to Cart</button>
+        </div>
+    </section>
+<script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(item, price) {
+    cart.push({ item, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    alert(`${item} added to cart!`);
+}
+
+function updateCartCount() {
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+function loadCartCount() {
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+document.addEventListener("DOMContentLoaded", loadCartCount);
+</script>
+</body>
+</html>
